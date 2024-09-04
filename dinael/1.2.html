@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+    <style>
+      .img {
+        background-image: url("assets/ghost.jpg");
+      }
+
+      a {
+        background-color: rgba(9, 161, 16, 0.584);
+      }
+
+      .flicker-in-1 {
+        -webkit-animation: flicker-in-1 2s linear both;
+        animation: flicker-in-1 2s linear both;
+        animation-delay: 2s;
+        border-radius: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        transition: 200ms;
+      }
+
+      .flicker-in-1:hover {
+        transform: rotate(180deg);
+      }
+
+      #foobar {
+        display: none;
+      }
+
+      #merkel {
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="img"></div>
+    <div class="container mx-auto">
+      <h1 class="text-3xl mt-10 mb-20 text-center">Das Rätsel des Herzens</h1>
+      <h2 class="text-xl mb-20 text-center">
+        Der Waldgeist stellt dir ein Rätsel: "Welcher Schatz bleibt wertvoll,
+        auch wenn er geteilt wird?"
+      </h2>
+      <img id="merkel" src="assets/merkel.png" />
+      <div class="grid grid-cols-3 gap-5 text-center" onclick="clicked($event)">
+        <a href="1.2.1.html">Antwort: 'Liebe'</a>
+        <a href="1.2.2.html">Antwort: 'Freundschaft'</a>
+        <a href="1.2.3.html">Antworte falsch oder weigere dich</a>
+      </div>
+    </div>
+
+    <audio id="foobar" src="assets/stroboscope.mp3" preload="auto"></audio>
+
+    <script>
+      function clicked(event) {
+        console.log("hi", event);
+
+        event.preventDefault();
+        document.getElementById("merkel").classList.add("flicker-in-1");
+        const sample = document.getElementById("foobar");
+        sample.play();
+      }
+    </script>
+  </body>
+</html>
