@@ -18,7 +18,7 @@
       .flicker-in-1 {
         -webkit-animation: flicker-in-1 2s linear both;
         animation: flicker-in-1 2s linear both;
-        animation-delay: 2s;
+        animation-delay: 5s;
         border-radius: 20px;
         position: absolute;
         top: 50%;
@@ -48,25 +48,18 @@
         Der Waldgeist stellt dir ein Rätsel: "Welcher Schatz bleibt wertvoll,
         auch wenn er geteilt wird?"
       </h2>
-      <img id="merkel" src="assets/merkel.png" />
-      <div class="grid grid-cols-3 gap-5 text-center" onclick="clicked($event)">
+      <img id="merkel" class="flicker-in-1" src="assets/merkel.png" />
+      <div class="grid grid-cols-3 gap-5 text-center">
         <a href="1.2.1.html">Antwort: 'Liebe'</a>
         <a href="1.2.2.html">Antwort: 'Freundschaft'</a>
         <a href="1.2.3.html">Antworte falsch oder weigere dich</a>
       </div>
     </div>
 
-    <audio id="foobar" src="assets/stroboscope.mp3" preload="auto"></audio>
-
+    <audio id="audio" src="assets/stroboscope.mp3"></audio>
     <script>
-      function clicked(event) {
-        console.log("hi", event);
-
-        event.preventDefault();
-        document.getElementById("merkel").classList.add("flicker-in-1");
-        const sample = document.getElementById("foobar");
-        sample.play();
-      }
+      var audio = document.getElementById("audio");
+      audio.play();
     </script>
   </body>
 </html>
