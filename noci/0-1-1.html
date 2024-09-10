@@ -2,25 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
 </head>
-<body>
+<body class="bg-gray-800 text-gray-200 font-sans">
 
-<div class="flex flex-col justify-center items-center">
-    <div class="mt-[20px] text-2xl">Du setzt all deine verbleibende Kraft ein und drehst das Rad weiter.</div>
-    <div class="mt-[20px] text-xl">Der Widerstand ist gewaltig, und deine Muskeln schreien vor Anstrengung. Doch langsam, sehr langsam, bewegt sich das Rad weiter.</div>
-    <div class="mt-[20px] text-xl">Mit jedem Zentimeter, den das Rad sich dreht, spürst du, wie dein Körper schwächer wird, als ob das Rad deine Energie absaugt.</div>
-    <div class="mt-[20px] text-xl">Der Countdown auf der Metalltafel verändert sich nun. Die rote "0" weicht einer Zahl: "1".</div>
-    <div class="mt-[20px] text-xl">Du hast einen Fortschritt gemacht, aber zu welchem Preis? Dein Atem geht flach, und du spürst, dass deine Kräfte nachlassen.</div>
-    <div class="mt-[20px] text-xl">Das Rad bleibt stehen. Du kannst es nicht weiter drehen. Nicht heute.</div>
-    <div class="mt-[40px] text-3xl font-bold">Was tust du?</div>
-    <div class="mt-[20px] text-xl select-none"  onclick="window.location.href='0-1-1-1.html'">A - Ruhe dich aus und versuche es morgen erneut.</div>
-    <div class="mt-[20px] text-xl select-none"  onclick="window.location.href='0-1-1-2.html'">B - Untersuche das Rad nach weiteren Hinweisen.</div>
+<div class="flex flex-col justify-center items-center min-h-screen p-6">
+
+    <div class="mt-6 text-2xl text-gray-300 leading-relaxed max-w-2xl text-center">
+        Du setzt all deine verbleibende Kraft ein und drehst das Rad weiter.
+    </div>
+    <div class="mt-6 text-xl text-gray-300 leading-relaxed max-w-2xl text-center">
+        Der Widerstand ist gewaltig, und deine Muskeln schreien vor Anstrengung. Doch langsam, sehr langsam, bewegt sich das Rad weiter.
+    </div>
+    <div class="mt-6 text-xl text-gray-300 leading-relaxed max-w-2xl text-center">
+        Mit jedem Zentimeter, den das Rad sich dreht, spürst du, wie dein Körper schwächer wird, als ob das Rad deine Energie absaugt.
+    </div>
+    <div class="mt-6 text-xl text-gray-300 leading-relaxed max-w-2xl text-center">
+        Der Countdown auf der Metalltafel verändert sich nun. Die rote <span class="text-red-400">"0"</span> weicht einer Zahl: <span class="text-red-400">"1"</span>.
+    </div>
+    <div class="mt-6 text-xl text-gray-300 leading-relaxed max-w-2xl text-center">
+        Du hast einen Fortschritt gemacht, aber zu welchem Preis? Dein Atem geht flach, und du spürst, dass deine Kräfte nachlassen.
+    </div>
+    <div class="mt-6 text-xl text-gray-300 leading-relaxed max-w-2xl text-center">
+        Das Rad bleibt stehen. Du kannst es nicht weiter drehen. Nicht heute.
+    </div>
+    <div class="mt-12 text-3xl font-bold text-gray-100 text-center">
+        Was tust du?
+    </div>
+    <div class="mt-6 text-xl text-gray-300 cursor-pointer hover:bg-gray-700 p-2 rounded" onclick="window.location.href='0-1-1-1.html'">
+        A - Ruhe dich aus und versuche es morgen erneut.
+    </div>
+    <div class="mt-6 text-xl text-gray-300 cursor-pointer hover:bg-gray-700 p-2 rounded" onclick="window.location.href='0-1-1-2.html'">
+        B - Untersuche das Rad nach weiteren Hinweisen.
+    </div>
 
 </div>
 

@@ -2,30 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
 </head>
-<body>
+<body class="bg-gray-800 text-gray-200 font-sans">
 
-<div class="flex flex-col justify-center items-center">
-    <div class="mt-[20px] text-2xl">Dein Atem geht schwer, als du dich auf das uralte Rad zubewegst.</div>
-    <div class="mt-[20px] text-xl">Der Sand unter deinen Füßen knirscht bei jedem Schritt, und der Druck in deinem Kopf wächst, als ob die Last der Situation auf dir lastet.</div>
-    <div class="mt-[20px] text-xl">Du legst deine Hand auf die raue Oberfläche des Rads. Es fühlt sich kälter an, als du erwartet hast.</div>
-    <div class="mt-[20px] text-xl">In den Rissen und Kerben erkennst du Symbole, die dir vage bekannt vorkommen, aber ihre Bedeutung entzieht sich deinem Gedächtnis.</div>
-    <div class="mt-[20px] text-xl">Das Steinrad wirkt, als wäre es Teil eines uralten Mechanismus, der lange nicht bewegt wurde. Staub und Sand haben sich in den Vertiefungen angesammelt.</div>
-    <div class="mt-[20px] text-xl">Als du versuchst, das Rad zu drehen, spürst du den Widerstand. Es ist schwer, unnachgiebig, als würde es gegen dich arbeiten.</div>
-    <div class="mt-[20px] text-xl">Du setzt mehr Kraft ein, aber das Rad bewegt sich nur langsam, mit einem tiefen, knirschenden Geräusch.</div>
-    <div class="mt-[20px] text-xl">Während es sich dreht, fühlst du, wie etwas in dir mitschwingt, als ob das Rad und dein Körper in einer seltsamen Resonanz stehen.</div>
-    <div class="mt-[20px] text-xl">Der Countdown auf der Metalltafel verändert sich nicht, doch die rote "0" flackert für einen Moment, als ob sie zum Leben erwacht.</div>
-    <div class="mt-[20px] text-xl">Du weißt nicht, was du ausgelöst hast, aber es gibt kein Zurück mehr.</div>
-    <div class="mt-[40px] text-3xl font-bold">Was tust du?</div>
-    <div class="mt-[20px] text-xl select-none" onclick="window.location.href='0-1-1.html'">A - Setze all deine Kraft ein und drehe das Rad weiter.</div>
-    <div class="mt-[20px] text-xl select-none" onclick="window.location.href='0-1-2.html'">B - Lass das Rad los und untersuche die Symbole genauer.</div>
-    <div class="mt-[20px] text-xl select-none">C - Halte inne und lausche auf mögliche Veränderungen im Raum.</div>
+<div class="flex flex-col justify-center items-center min-h-screen p-6">
+
+    <div class="mt-6 text-2xl text-gray-300 leading-relaxed max-w-2xl text-center">
+        Dein Atem geht schwer, als du dich auf das uralte Rad zubewegst.
+    </div>
+    <div class="mt-6 text-xl text-gray-300 leading-relaxed max-w-2xl text-center">
+        Der Sand unter deinen Füßen knirscht bei jedem Schritt, und der Druck in deinem Kopf wächst, als ob die Last der Situation auf dir lastet.
+    </div>
+    <div class="mt-6 text-xl text-gray-300 leading-relaxed max-w-2xl text-center">
+        Du legst deine Hand auf die raue Oberfläche des Rads. Es fühlt sich kälter an, als du erwartet hast.
+    </div>
+    <div class="mt-6 text-xl text-gray-300 leading-relaxed max-w-2xl text-center">
+        In den Rissen und Kerben erkennst du Symbole, die dir vage bekannt vorkommen, aber ihre Bedeutung entzieht sich deinem Gedächtnis.
+    </div>
+    <div class="mt-6 text-xl text-gray-300 leading-relaxed max-w-2xl text-center">
+        Das Steinrad wirkt, als wäre es Teil eines uralten Mechanismus, der lange nicht bewegt wurde. Staub und Sand haben sich in den Vertiefungen angesammelt.
+    </div>
+    <div class="mt-6 text-xl text-gray-300 leading-relaxed max-w-2xl text-center">
+        Als du versuchst, das Rad zu drehen, spürst du den Widerstand. Es ist schwer, unnachgiebig, als würde es gegen dich arbeiten.
+    </div>
+    <div class="mt-6 text-xl text-gray-300 leading-relaxed max-w-2xl text-center">
+        Du setzt mehr Kraft ein, aber das Rad bewegt sich nur langsam, mit einem tiefen, knirschenden Geräusch.
+    </div>
+    <div class="mt-6 text-xl text-gray-300 leading-relaxed max-w-2xl text-center">
+        Während es sich dreht, fühlst du, wie etwas in dir mitschwingt, als ob das Rad und dein Körper in einer seltsamen Resonanz stehen.
+    </div>
+    <div class="mt-6 text-xl text-gray-300 leading-relaxed max-w-2xl text-center">
+        Der Countdown auf der Metalltafel verändert sich nicht, doch die rote "0" flackert für einen Moment, als ob sie zum Leben erwacht.
+    </div>
+    <div class="mt-6 text-xl text-gray-300 leading-relaxed max-w-2xl text-center">
+        Du weißt nicht, was du ausgelöst hast, aber es gibt kein Zurück mehr.
+    </div>
+    <div class="mt-12 text-3xl font-bold text-gray-100 text-center">
+        Was tust du?
+    </div>
+    <div class="mt-6 text-xl text-gray-300 cursor-pointer hover:bg-gray-700 p-2 rounded" onclick="window.location.href='0-1-1.html'">
+        A - Setze all deine Kraft ein und drehe das Rad weiter.
+    </div>
+    <div class="mt-6 text-xl text-gray-300 cursor-pointer hover:bg-gray-700 p-2 rounded" onclick="window.location.href='0-1-2.html'">
+        B - Lass das Rad los und untersuche die Symbole genauer.
+    </div>
+    <div class="mt-6 text-xl text-gray-300 cursor-pointer hover:bg-gray-700 p-2 rounded">
+        C - Halte inne und lausche auf mögliche Veränderungen im Raum.
+    </div>
+
 </div>
 
 </body>
