@@ -4,9 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anomalies</title>
-    <style></style>
+    <style>
+      #background {
+        background-image: url("Sleep(1).jpg");
+        background-size: 1920px 1080px;
+        overflow: hidden;
+      }
+    </style>
   </head>
-  <body>
-    <script></script>
+  <body id="background">
+    <h1 id="Animtext"></h1>
+    <button onclick="TextPrompter('Loen','Animtext2')"></button>
+    <button
+      onclick="TextPrompter('Ich stinke nach mettwurst.','Animtext')"
+    ></button>
+    <h1 id="Animtext2"></h1>
+    <script>
+      function TextPrompter(text, id) {
+        const header = document.getElementById(id);
+        const interval = 50;
+
+        let currentIndex = 0;
+
+        const typingAnimation = setInterval(() => {
+          header.textContent = header.textContent + text[currentIndex];
+
+          currentIndex++;
+
+          if (currentIndex === text.length) {
+            clearInterval(typingAnimation);
+          }
+        }, interval);
+        setTimeout(() => {
+          header.textContent = "";
+        }, 8000);
+      }
+    </script>
   </body>
 </html>
