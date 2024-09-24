@@ -14,7 +14,7 @@
   </head>
   <body id="background">
     <h1 id="Animtext"></h1>
-    <button onclick="TextPrompter('Loen','Animtext2')"></button>
+    <button id="Loen" onclick="TextPrompter('Loen','Animtext2')"></button>
     <button
       onclick="TextPrompter('Ich stinke nach mettwurst.','Animtext')"
     ></button>
@@ -26,9 +26,14 @@
 
         let currentIndex = 0;
 
+        document.getElementsByTagName("button").forEach((element) => {
+          element.setAttribute("disabled", "true");
+        });
+
         const typingAnimation = setInterval(() => {
           header.textContent = header.textContent + text[currentIndex];
 
+          console.log(text[currentIndex]);
           currentIndex++;
 
           if (currentIndex === text.length) {
@@ -37,6 +42,9 @@
         }, interval);
         setTimeout(() => {
           header.textContent = "";
+          document.getElementsByTagName("button").forEach((element) => {
+            element.setAttribute("disabled", "true");
+          });
         }, 8000);
       }
     </script>
