@@ -19,28 +19,29 @@
     ></button>
     <h1 id="Animtext"></h1>
     <script>
+      /// Onclick event + mit Inputs
       function TextPrompter(text, id) {
         const header = document.getElementById(id);
         const interval = 50;
-
         let currentIndex = 0;
 
+        /// Nimm mal alle buttons und mach die mal nicht anclickbar
         const buttonlist = document.getElementsByTagName("button");
         for (const button of buttonlist) {
           button.setAttribute("disabled", "true");
         }
-
+        /// Schau dir den Text im Button an und setze ein neues Zeichen bis der Text vollständig ist.
         const typingAnimation = setInterval(() => {
           header.textContent = header.textContent + text[currentIndex];
-
           console.log(text[currentIndex]);
           currentIndex++;
 
+          ///Hör auf wenn vollständig ist
           if (currentIndex === text.length) {
             clearInterval(typingAnimation);
           }
         }, interval);
-
+        /// Buttons wieder clickbar machen wenn gelesen wurde
         setTimeout(() => {
           header.textContent = "";
           for (const button of buttonlist) {
