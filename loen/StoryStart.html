@@ -13,12 +13,11 @@
     </style>
   </head>
   <body id="background">
-    <h1 id="Animtext"></h1>
-    <button id="Loen" onclick="TextPrompter('Loen','Animtext2')"></button>
+    <button id="Loen" onclick="TextPrompter('Loen','Animtext')"></button>
     <button
       onclick="TextPrompter('Ich stinke nach mettwurst.','Animtext')"
     ></button>
-    <h1 id="Animtext2"></h1>
+    <h1 id="Animtext"></h1>
     <script>
       function TextPrompter(text, id) {
         const header = document.getElementById(id);
@@ -26,9 +25,10 @@
 
         let currentIndex = 0;
 
-        document.getElementsByTagName("button").forEach((element) => {
-          element.setAttribute("disabled", "true");
-        });
+        const buttonlist = document.getElementsByTagName("button");
+        for (const button of buttonlist) {
+          button.setAttribute("disabled", "true");
+        }
 
         const typingAnimation = setInterval(() => {
           header.textContent = header.textContent + text[currentIndex];
@@ -40,11 +40,12 @@
             clearInterval(typingAnimation);
           }
         }, interval);
+
         setTimeout(() => {
           header.textContent = "";
-          document.getElementsByTagName("button").forEach((element) => {
-            element.setAttribute("disabled", "true");
-          });
+          for (const button of buttonlist) {
+            button.removeAttribute("disabled");
+          }
         }, 8000);
       }
     </script>
