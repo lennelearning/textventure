@@ -6,7 +6,7 @@
     <title>Anomalies</title>
     <style>
       #background {
-        background-image: url("Sleep(1).jpg");
+        background-image: url("hallway1.jpg");
         background-size: 1920px 1080px;
         overflow: hidden;
       }
@@ -14,11 +14,16 @@
   </head>
   <body id="background">
     <button
-      id="Loen"
-      onclick="TextPrompter('Du schläfst mit einem mulmigen Gefühl ein.','Animtext','Slide1.html')"
+      onclick="TextPrompter('Neben dir siehst du eine Rettungsliege.','Animtext')"
     ></button>
+    <!-- ///Doorslam soundeffect einbauen/// -->
     <button
-      onclick="TextPrompter('Du hörst nichts außer Stille, die Silhouette die dir in die Seele starrt b̸̨͈̟̫̜̆͐͘͜ĕ̸͍͕͎̣̻̔͛̂͆̋͝ͅw̵̛̗̓͒̕ͅę̷̞̖͖̿͘̚̕͜͝ḡ̵̦́̂͝t̴͎̯͙͐̔͘͜ sich nicht. ','Animtext')"
+      id="Loen"
+      onclick="TextPrompter('Du biegst in den Flur links ab. Ein kalter L̸̯̉̅͑u̶̫̲̇͗͜͝f̴͙́̃̔t̷͎̘̭̋z̴͍̙̐̐u̸̫̳̒̈g̶̫͋͛ kommt dir entgegen. Du hörst wie weiter entfernt eine Tür zuschlägt','Animtext','Slide3.html')"
+    ></button>
+    <!-- ///Regentropfen auf Bodengeräusche einbauen/// -->
+    <button
+      onclick="TextPrompter('Du schaust den Gang herunter und hörst leise Regen auf den Boden plätschern.','Animtext')"
     ></button>
     <h1 id="Animtext"></h1>
     <script>
@@ -45,6 +50,7 @@
           }
         }, interval);
         /// Buttons wieder clickbar machen wenn gelesen wurde
+        console.log("setTimeout");
         setTimeout(() => {
           header.textContent = "";
           for (const button of buttonlist) {
@@ -53,7 +59,7 @@
           if (link) {
             window.location.href = link;
           }
-        }, 8000);
+        }, 14000);
       }
     </script>
   </body>
