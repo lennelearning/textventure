@@ -5,19 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anomalies</title>
     <style>
+      #Omen {
+        width: 100dvw;
+        height: 100dvh;
+        background-color: black;
+        position: absolute;
+        opacity: 0%;
+        transition: 2s;
+      }
       #background {
         background-image: url("Sleep(1).jpg");
         background-size: 1920px 1080px;
         overflow: hidden;
+        background-blend-mode: darken;
+        margin: 0;
+      }
+      #Loen2 {
+        background-color: rgba(0, 128, 0, 0);
+        border: none;
+        height: 450px;
+        width: 100px;
+        position: absolute;
+        left: 73%;
+        top: 30%;
+        cursor: pointer;
+      }
+      #Loen {
+        background-color: rgba(0, 0, 255, 0);
+        border: none;
+        position: absolute;
+        width: 600px;
+        height: 250px;
+        left: 33%;
+        top: 70%;
+        cursor: pointer;
+      }
+      #BoiledOne {
+        position: absolute;
+        opacity: 0%;
+        rotate: -90deg;
+        left: 1600px;
+        transition-delay: 1s;
+        transition: 1s;
+      }
+      h1 {
+        color: white;
+        position: absolute;
       }
     </style>
   </head>
   <body id="background">
+    <div id="Omen"></div>
+    <img src="theboiledone.png" id="BoiledOne" />
     <button
       id="Loen"
       onclick="TextPrompter('Du schläfst mit einem mulmigen Gefühl ein.','Animtext','Slide1.html')"
     ></button>
     <button
+      id="Loen2"
       onclick="TextPrompter('Du hörst nichts außer Stille, die Silhouette die dir in die Seele starrt b̸̨͈̟̫̜̆͐͘͜ĕ̸͍͕͎̣̻̔͛̂͆̋͝ͅw̵̛̗̓͒̕ͅę̷̞̖͖̿͘̚̕͜͝ḡ̵̦́̂͝t̴͎̯͙͐̔͘͜ sich nicht. ','Animtext')"
     ></button>
     <h1 id="Animtext"></h1>
@@ -44,6 +89,8 @@
             clearInterval(typingAnimation);
           }
         }, interval);
+        document.getElementById("Omen").style.opacity = "70%";
+        document.getElementById("BoiledOne").style.opacity = "20%";
         /// Buttons wieder clickbar machen wenn gelesen wurde
         setTimeout(() => {
           header.textContent = "";
